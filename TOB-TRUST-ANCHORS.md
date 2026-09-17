@@ -6,15 +6,16 @@ SELF-CONSISTENT; verified AGAINST these pins, it is authenticated to the Jou
 Labs producer.
 
 Packet: `EARL-ToB-evaluation-packet-v3.3-2026-09-17.zip`
-(v3.3 corrects v3.1: the probe replay recipe preserves the banked seed
-ORDER (campaign3/seeds.json 'pairs'); release_check.sh really verifies the
-90-entry ledger manifest and 26-entry corpus manifest; and replay --run fails on
-zero comparisons. (Carries forward v3.2's fresh signature, shared-corpus probe,
-runnable quickstart, real sealed-binary filenames, and the release gate.))
+(v3.3 corrects three v3.2-review defects: the probe replay recipe preserves the
+banked seed ORDER (campaign3/seeds.json 'pairs'); `release_check.sh` really
+verifies the 90-entry ledger manifest and 26-entry corpus manifest; and
+`replay_entrypoint.py --run` fails on zero comparisons. It carries forward v3.2's
+fresh packet signature, shared-corpus probe two-pass, runnable quickstart, real
+sealed-binary filenames, and the scripted release gate.)
 
 ```
 SIGNED ZIP SHA-256
-  b466a31f9a4cc2559e4964f2ae0b48862248edb3ece910e034d68494cb6cc668
+  207716cdeaa4b2052e7027647e62b37d267a7b56729ae8f3628911d6d49f8ea4
 ROOT MANIFEST SHA-256 (MANIFEST.sha256; covers all 226 packet content files)
   e6865992716be81d840dc9fdff1f61c1608a881acfca853451b5d3d0435e8f5c
 PUBLISHER Ed25519 PUBLIC KEY (base64; signs PACKET-SIGNATURE.json and the observatory)
@@ -29,7 +30,7 @@ Source provenance (externally retrievable at `github.com/Jou-Labs/earl`):
 
 ```
 DELIVERY TIP COMMIT (branch genesis/g1-founder-genome)
-  df792fa06009d5691e127c6c6d30c04eecf30d3f
+  3c493ae0d8d5a795d0bd5e11724ab3b3bdff985c
 CORRECTED-HARNESS BUILD-CLOSURE COMMIT (the corrected source archive; builds with --locked)
   10d5b06f0c120588f52870bbecbfb26756d59a3c
 ```
