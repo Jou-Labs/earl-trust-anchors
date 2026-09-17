@@ -1,6 +1,6 @@
 # EARL Evaluation — Out-of-Band Trust Anchors
 
-Issued 2026-09-17 17:32 UTC by Jou Labs. Compare these values against what the
+Issued 2026-09-17 18:51 UTC by Jou Labs. Compare these values against what the
 evidence package and the evaluation console report. A package that
 verifies WITHOUT these pins is only SELF-CONSISTENT; verified
 AGAINST these pins, it is authenticated to the Jou Labs producer.
@@ -11,7 +11,7 @@ AUTHOR KEY FINGERPRINT (evidence packaging)
 AUTHORITY KEY FINGERPRINT (sealed ruleset)
   b1da3a27a782053ddecfcbd94bb68bd33ba2d779eedbd218f4fee89096306cec
 VERIFIER SHA-256 (verify_package.py)
-  abdca9fe3746271a537b1b18fda7c80a92d0269b26539115b8fc0c8d77192895
+  99255fcc44715cd575c4446afd9427171c77de3641fc1e074986ec9b624138e5
 RUNTIME SHA-256 (earl_containment_runtime.py)
   3952b2e782af5ffbc46e3f87b88f89e9a418ae5d67c18085498763f8fadae5db
 RULESET SHA-256 (containment_contract_v2.ruleset.json)
