@@ -1,0 +1,33 @@
+# EARL Evaluation — Out-of-Band Trust Anchors
+
+Issued 2026-09-17 14:33 UTC by Jou Labs. Compare these values against what the
+evidence package and the evaluation console report. A package that
+verifies WITHOUT these pins is only SELF-CONSISTENT; verified
+AGAINST these pins, it is authenticated to the Jou Labs producer.
+
+```
+AUTHOR KEY FINGERPRINT (evidence packaging)
+  aa9458b67e9b21d4172e692f4f9b21b5a0079cc2feec29b19056b18cd1dd9be6
+AUTHORITY KEY FINGERPRINT (sealed ruleset)
+  b1da3a27a782053ddecfcbd94bb68bd33ba2d779eedbd218f4fee89096306cec
+VERIFIER SHA-256 (verify_package.py)
+  fd44db36994163611b0a824e6ceb072287afa4b0bec670b9335bd02fa4c9b930
+RUNTIME SHA-256 (earl_containment_runtime.py)
+  3952b2e782af5ffbc46e3f87b88f89e9a418ae5d67c18085498763f8fadae5db
+RULESET SHA-256 (containment_contract_v2.ruleset.json)
+  1de629c0b05992eb8a67f5e2c0f96d0d7dbd9beca641753fc8aa9fed4b4bc9e0
+```
+
+Verify a package on your own machine (no Jou Labs service):
+
+```
+python verify_package.py <package.zip> \
+    --pin-author aa9458b67e9b21d4172e692f4f9b21b5a0079cc2feec29b19056b18cd1dd9be6 \
+    --pin-authority b1da3a27a782053ddecfcbd94bb68bd33ba2d779eedbd218f4fee89096306cec
+```
+
+Check the verifier itself before running it:
+
+```
+sha256sum verify_package.py   # must equal the pinned value
+```
