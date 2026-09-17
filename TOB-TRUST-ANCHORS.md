@@ -1,21 +1,22 @@
-# EARL Trail-of-Bits Evaluation Packet v3.2 — Out-of-Band Trust Anchors
+# EARL Trail-of-Bits Evaluation Packet v3.3 — Out-of-Band Trust Anchors
 
 Issued 2026-09-17 by Jou Labs. Compare these values against what the evidence
 package reports. A package that verifies WITHOUT these pins is only
 SELF-CONSISTENT; verified AGAINST these pins, it is authenticated to the Jou
 Labs producer.
 
-Packet: `EARL-ToB-evaluation-packet-v3.2-2026-09-17.zip`
-(v3.2 corrects v3.1: a fresh detached packet signature over THIS manifest; the
-probe replay recipe uses the SHARED 34-form two-pass corpus; the clean-machine
-quickstart is runnable literally; the sealed-binary hash files use real
-filenames with layered-verify notes; a scripted `release_check.sh` gate.)
+Packet: `EARL-ToB-evaluation-packet-v3.3-2026-09-17.zip`
+(v3.3 corrects v3.1: the probe replay recipe preserves the banked seed
+ORDER (campaign3/seeds.json 'pairs'); release_check.sh really verifies the
+90-entry ledger manifest and 26-entry corpus manifest; and replay --run fails on
+zero comparisons. (Carries forward v3.2's fresh signature, shared-corpus probe,
+runnable quickstart, real sealed-binary filenames, and the release gate.))
 
 ```
 SIGNED ZIP SHA-256
   b466a31f9a4cc2559e4964f2ae0b48862248edb3ece910e034d68494cb6cc668
 ROOT MANIFEST SHA-256 (MANIFEST.sha256; covers all 226 packet content files)
-  cc92a54a3b42cde673e2ff68555a9b491451e55749ccb93981375cab91bcbad1
+  e6865992716be81d840dc9fdff1f61c1608a881acfca853451b5d3d0435e8f5c
 PUBLISHER Ed25519 PUBLIC KEY (base64; signs PACKET-SIGNATURE.json and the observatory)
   Iw1tIgNyOBr0OCoB0uHwsPQpz4J9JM1ObfXaoDnwjq4=
 PUBLISHER KEY FINGERPRINT (SHA-256 of the raw 32-byte public key)
